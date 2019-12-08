@@ -52,6 +52,5 @@ def lambda_handler(event, context):
         print ("Executing {}".format(command))
         stdin , stdout, stderr = c.exec_command(command, timeout=120)
         result = stdout.read().decode('ascii')
-        #print (stderr.read())
 
     return result
