@@ -32,6 +32,7 @@ def lambda_handler(event, context):
         print (stdout.read())
         print (stderr.read())
 
+
     return
     {
         'message' : "Script execution completed. See Cloudwatch logs for complete output"
