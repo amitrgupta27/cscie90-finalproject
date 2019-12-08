@@ -24,9 +24,9 @@ def lambda_handler(event, context):
     print(hostList)
     s3_client = boto3.client('s3')
     #Download private key file from secure S3 bucket
-    s3_client.download_file('cscie90-finalproject-virginia','virginia.pem', '/tmp/virginia.pem')
+    s3_client.download_file('s3 bucket','file.pem', '/tmp/file.pem')
 
-    k = paramiko.RSAKey.from_private_key_file("/tmp/virginia.pem")
+    k = paramiko.RSAKey.from_private_key_file("/tmp/file.pem")
     
     c = paramiko.SSHClient()
     c.set_missing_host_key_policy(paramiko.AutoAddPolicy())

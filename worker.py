@@ -10,7 +10,7 @@ def lambda_handler(event, context):
     #Download private key file from secure S3 bucket
     s3_client.download_file('s3-bucket','file.pem', '/tmp/file.pem')
 
-    k = paramiko.RSAKey.from_private_key_file("/tmp/virginia.pem")
+    k = paramiko.RSAKey.from_private_key_file("/tmp/file.pem")
     c = paramiko.SSHClient()
     c.set_missing_host_key_policy(paramiko.AutoAddPolicy())
 
