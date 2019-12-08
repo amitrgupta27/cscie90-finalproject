@@ -4,7 +4,6 @@ import re
 from nltk.tokenize import sent_tokenize
 from keras.preprocessing.text import Tokenizer
 from keras.preprocessing.sequence import pad_sequences
-import gensim.models.keyedvectors as word2vec
 import gc
 import string
 import nltk
